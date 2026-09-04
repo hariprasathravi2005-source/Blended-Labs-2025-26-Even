@@ -4,7 +4,8 @@
 
 * **Name**: Hariprasath.R
 * **Register Number**: 212223060081
-* **Date of Submission**: 30/08/2026
+* **Date of Submission**: 31/08/2026
+
 
 ---
 
@@ -85,38 +86,31 @@ Create a simple HTML page and verify that it can be accessed from a web browser 
 
 ## Workflow (Student Explanation)
 
-First, I created a VPC in Amazon Web Services. I gave it a CIDR block of 10.0.0.0/16. This VPC acts as my private network where all my resources will be created.
+1.I logged in to the AWS Management Console and created a new VPC with the CIDR block 10.0.0.0/16 to provide an isolated network environment for my resources.
 
-Next, I created a public subnet inside the VPC with CIDR 10.0.1.0/24. I enabled auto-assign public IP so that any instance launched in this subnet will automatically get a public IP address.
+2.Inside the VPC, I created a public subnet with the CIDR block 10.0.1.0/24 and enabled Auto-assign Public IPv4 Address so that instances launched in the subnet 
 
-After that, I created an Internet Gateway and attached it to my VPC. This allows my VPC to communicate with the internet.
+could receive public IP addresses.
 
-Then, I created a route table and added a default route (0.0.0.0/0) pointing to the Internet Gateway. I associated this route table with my public subnet. This step ensures that traffic from my subnet can reach the internet.
+3.I created an Internet Gateway (IGW) and attached it to the VPC. Then, I created a route table, added a default route (0.0.0.0/0) pointing to the IGW, and 
 
-Next, I created a security group which acts as a virtual firewall. I allowed inbound traffic for SSH on port 22 and HTTP on port 80.
+associated the route table with the public subnet to enable internet connectivity.
 
-After completing the network setup, I launched an EC2 instance using Amazon Linux 2 AMI with instance type t2.micro. I selected my VPC, public subnet, created security group, and key pair.
+4.Next, I created a security group and configured inbound rules to allow SSH (Port 22) for remote access and HTTP (Port 80) for web traffic. After that, I 
 
-Finally, I connected to the EC2 instance using SSH and installed the Apache web server. I started the service and created a simple HTML page. Then I copied the public IP address of the instance and opened it in a web browser. The webpage was displayed successfully.
+launched an Amazon EC2 instance using the Amazon Linux 2 AMI in the public subnet and attached the security group and key pair.
 
-So, this is how I created a VPC, launched an EC2 instance, and hosted a simple web server in AWS.
+5.Finally, I connected to the EC2 instance, installed and started the Apache HTTP Server (httpd), created a simple HTML web page, and verified that the website 
+
+was accessible through a web browser using the instance's public IP address.
 
 ## Output Screenshots (Attach 3)
-
-### Screenshot 1: VPC and Subnet Details
-<img width="1287" height="748" alt="image" src="https://github.com/user-attachments/assets/a6111f32-8df7-4103-9a6a-bfcb1960c283" />
+<img width="1917" height="936" alt="Screenshot 2026-08-17 141752" src="https://github.com/user-attachments/assets/24b33507-c1d0-439c-932a-ff68f2815cff" />
 
 
+<img width="1909" height="928" alt="Screenshot 2026-08-17 142039" src="https://github.com/user-attachments/assets/2e61b51c-b8c7-4a94-b91b-796c5fe672e8" />
 
-### Screenshot 2: EC2 Instance Running
-
-<img width="1248" height="607" alt="image" src="https://github.com/user-attachments/assets/51ebb37b-71ef-47eb-bbfa-442e34ef5c29" />
-
-
-### Screenshot 3: Web Server Output in Browser
-
-<img width="1258" height="703" alt="image" src="https://github.com/user-attachments/assets/f0a00592-6294-4b23-8f28-b7554cd3ff9d" />
-
+<img width="1911" height="986" alt="Screenshot 2026-08-17 144652" src="https://github.com/user-attachments/assets/04525aa9-5736-4c30-b66a-2582b6e10537" />
 
 ## Result 
 
