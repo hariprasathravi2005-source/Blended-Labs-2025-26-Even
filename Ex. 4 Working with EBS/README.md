@@ -2,9 +2,9 @@
 
 ## Author
 
-* **Name**: ________________________________
-* **Register Number**: _____________________
-* **Date of Submission**: __________________
+* **Name**:HARI PRASATH R
+* **Register Number**: 212223060081
+* **Date of Submission**: 31-08-2026
 
 ---
 
@@ -75,38 +75,33 @@ Create files and directories inside the mounted EBS volume and store sample data
 Reboot the EC2 instance and verify that the data stored in the EBS volume is still available after reboot.
 
 ---
-
 ## Workflow (Student Explanation)
 
 (Write the steps you followed in your own words)
 
-1. ---
-2. ---
-3. ---
-4. ---
-5. ---
+1.I logged into the AWS Management Console, opened the EC2 Dashboard, and explored the Elastic Block Store (EBS) section to understand different volume types such as gp2, gp3, and HDD volumes.
+2.I created a new EBS volume by selecting the required size and volume type and ensured that the volume was created in the same Availability Zone as my EC2 instance.
+3.After creating the volume, I attached the EBS volume to the running EC2 instance as an additional storage device using the EC2 console.
+4.Then I connected to the EC2 instance using SSH, formatted the new volume using the ext4 file system, and mounted it to a directory (such as /mnt/ebs). I created sample files to store data in the mounted volume.
+5.Finally, I rebooted the EC2 instance and verified that the files stored in the EBS volume were still available, confirming data persistence in Amazon EBS.
 
----
 
 ## Output Screenshots (Attach 3)
 
 ### Screenshot 1: EBS Volume Created
 
-(Insert Screenshot Here)
+<img width="945" height="902" alt="image" src="https://github.com/user-attachments/assets/8ff9e6f3-8cc4-418c-878f-c8cf5f32fc8c" />
 
----
 
 ### Screenshot 2: EBS Volume Attached to EC2
 
-(Insert Screenshot Here)
+<img width="947" height="897" alt="image" src="https://github.com/user-attachments/assets/613b804d-c3a5-49e7-84af-b8da80f15a1f" />
 
----
 
 ### Screenshot 3: Mounted Volume with Data
 
-(Insert Screenshot Here)
+<img width="942" height="889" alt="image" src="https://github.com/user-attachments/assets/6c84e5dd-38a8-4d80-b47c-9c0af19ddde9" />
 
----
 
 ## Result / Conclusion
 
